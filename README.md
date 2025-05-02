@@ -1,9 +1,29 @@
 # BunnyCDN-Mediaframe-ripper
 This set of scripts enables the automated download of DRM-protected videos hosted on Bunny CDN by simulating embed access and using `yt_dlp` to retrieve the video.
 
-====================
-BUNNY CDN DOWNLOADER
-====================
+ENGLISH
+-------
+
+Description:
+This set of scripts enables the automated download of DRM-protected videos hosted on Bunny CDN by simulating embed access and using `yt_dlp` to retrieve the video.
+
+Components:
+- drm-ases.py  → Main script to simulate DRM pings and download the video.
+- changer.py   → Interactive helper that injects URL, filename, and path into `drm-ases.py`.
+- interm.py    → Launches `drm-ases.py` from a specific directory via PowerShell.
+- MERLIN.bat   → Optional batch launcher (purpose to be confirmed).
+
+Usage:
+1. Run `changer.py`:
+   - Paste the embed iframe URL.
+   - Enter the desired filename (without extension).
+   - Choose a subject and subfolder.
+   - It will automatically modify `drm-ases.py` and launch the download.
+
+Requirements:
+- Python 3.x
+- Installed modules: `requests`, `yt_dlp`
+- Valid access to the Bunny CDN embed
 
 ESPAÑOL
 -------
@@ -37,31 +57,6 @@ Notas:
 - El archivo descargado es `.mp4` y se guarda en la ruta seleccionada.
 
 -------------------------------
-
-ENGLISH
--------
-
-Description:
-This set of scripts enables the automated download of DRM-protected videos hosted on Bunny CDN by simulating embed access and using `yt_dlp` to retrieve the video.
-
-Components:
-- drm-ases.py  → Main script to simulate DRM pings and download the video.
-- changer.py   → Interactive helper that injects URL, filename, and path into `drm-ases.py`.
-- interm.py    → Launches `drm-ases.py` from a specific directory via PowerShell.
-- MERLIN.bat   → Optional batch launcher (purpose to be confirmed).
-
-Usage:
-1. Run `changer.py`:
-   - Paste the embed iframe URL.
-   - Enter the desired filename (without extension).
-   - Choose a subject and subfolder.
-   - It will automatically modify `drm-ases.py` and launch the download.
-
-Requirements:
-- Python 3.x
-- Installed modules: `requests`, `yt_dlp`
-- Valid access to the Bunny CDN embed
-
 Notes:
 - Folder structure is based on academic subjects.
 - Add new subjects or folders in `changer.py` under the `OPCIONES` dictionary.
